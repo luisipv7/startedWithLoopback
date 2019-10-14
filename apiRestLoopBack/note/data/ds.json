@@ -1,0 +1,11 @@
+{
+  "ids": {
+    "Note": 3
+  },
+  "models": {
+    "Note": {
+      "3": "{\"title\":\"Great baby\",\"content\":\"LoopBack is a great baby\",\"id\":3}",
+      "2": "{\"title\":\"Great frameworks\",\"content\":\"LoopBack is a great framework\",\"id\":2}"
+    }
+  }
+}
