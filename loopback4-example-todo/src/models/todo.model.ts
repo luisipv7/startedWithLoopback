@@ -3,7 +3,8 @@
 // This file is licensed under the MIT License.
 // License text available at https://opensource.org/licenses/MIT
 
-import {Entity, model, property} from '@loopback/repository';
+import { Entity, model, property, belongsTo } from '@loopback/repository';
+import { TodoList, TodoListWithRelations } from './todo-list.model';
 
 @model()
 export class Todo extends Entity {
@@ -32,6 +33,9 @@ export class Todo extends Entity {
   @property({
     type: 'string',
   })
+
+  @belongsTo(() => TodoList)
+  todoListId: number;
   remindAtAddress?: string; // address,city,zipcode
 
   // TODO(bajtos) Use LoopBack's GeoPoint type here
@@ -47,6 +51,7 @@ export class Todo extends Entity {
 
 export interface TodoRelations {
   // describe navigational properties here
+  todoList?: TodoListWithRelations;
 }
 
 export type TodoWithRelations = Todo & TodoRelations;
