@@ -47,7 +47,7 @@
     "loopback-connector-rest": "^3.5.0"
   },
   "devDependencies": {
-    "@loopback/build": "^2.0.14",
+    "@loopback/build": "^9.0.6",
     "@loopback/eslint-config": "^4.1.2",
     "@loopback/http-caching-proxy": "^1.1.16",
     "@loopback/testlab": "^1.9.2",
